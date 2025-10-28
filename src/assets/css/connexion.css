@@ -1,0 +1,85 @@
+/* importation de la police */
+
+@font-face {
+    font-family: "Franchise";
+    src: url("../assets/Franchise.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins_Med";
+    src: url("../assets/Poppins/Poppins-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins_SemiBold";
+    src: url("../assets/Poppins/Poppins-SemiBold.ttf") format("truetype");
+}
+
+/* logo dans le header */
+.logo
+    {
+    position: relative;
+    top: 1em;
+    left: 1em;
+    flex-shrink: 0;
+    width: 200px;
+    }
+
+.illu{
+    justify-content: center;
+    width: 100%;
+}
+
+.login-form 
+{
+    width: 70%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.login-form form 
+{
+    margin-bottom: 15px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.login-form h2 
+{
+    margin: 0 0 15px;
+    color: #014C73;
+    font-family: Suse_Light;
+    font-size: 200%;
+    text-align: center;
+}
+
+.form-control, .btn 
+{
+    min-height: 38px;
+    border-radius: 10px;
+    border: solid;
+    border-width: 1px;
+    text-align: center;
+    margin: 5px;
+    min-width: 150px;
+    width: 70%;
+}
+
+.btn 
+{        
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color:black;
+    font-family: Suse_Light;
+    background:white;
+    opacity: 0.5;
+}
+
+.btn:hover{
+    color: #014C73;
+    opacity: 1;
+}

@@ -1,0 +1,33 @@
+button {
+    background-color: #014C73;
+    opacity: 0.7;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    opacity: 1;
+}
+
+
+.btn_member{
+    padding: 12px;
+    background-color: white;
+    color: #014C73;
+    border: solid;
+    border-radius: 15px;
+    text-align: center;
+    font-family: Suse_Light;
+    font-size: 20px;
+    cursor: pointer;
+    width: fit-content;
+    transition: transform 0.3s ease;
+}
+
+.btn_member:hover{
+    transform: scale(1.05);
+    border: solid rgb(255, 151, 0);
+}
