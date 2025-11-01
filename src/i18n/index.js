@@ -11,6 +11,9 @@ explore the world of surfing and experienced riders looking to enhance their ski
     join: 'Join us to ride the waves!',
     activities: 'Our activities',
     calendar: 'Calendar 🗓️',
+    "home": {
+      "followUsOnInstagram": "Follow us on Instagram"
+    },
     winch: {
       title: 'Winch Surfing',
       desc: 'Winch surfing is one of our favourite activities! It offers an exhilarating way to experience the thrill of riding a surfboard.'
@@ -67,9 +70,11 @@ explore the world of surfing and experienced riders looking to enhance their ski
       send: "Send",
       success: "Your message was sent successfully!",
     },
-    documents: {
-      title: "Documents",
-      subtitle: "Legal documents",
+    documents: {      
+      title: "Documents",      
+      subtitle: "Download the association's official documents",
+      status: "Association status",      
+      disclaimer: "USC Lausanne disclaimer"    
     },
     team: {
       title: "Our Team",
@@ -113,6 +118,20 @@ explore the world of surfing and experienced riders looking to enhance their ski
       phototheque: "Gallery",
       history: "History"
     },
+    eventsPage: {
+      title: 'Events',
+      intro: `The club organises special events throughout the year, offering unique moments to bring members together and share the spirit of surfing beyond regular activities.`,
+    },
+
+    // --- GALLERY PAGE ---
+    gallery: {
+      title: "Gallery",
+      subtitle: "Dive into the highlights of our club's best moments!",
+      empty: "No photos yet. Stay tuned for upcoming events and memories.",
+      download: "Download",
+      seeAll: "See all",
+      close: "Close",
+    }
   },
 
   fr: {
@@ -122,6 +141,9 @@ explore the world of surfing and experienced riders looking to enhance their ski
     join: 'Rejoignez-nous pour surfer sur les vagues !',
     activities: 'Nos activités',
     calendar: 'Calendrier 🗓️',
+    "home": {
+      "followUsOnInstagram": "Suivez-nous sur Instagram"
+    },
     winch: {
       title: 'Winch Surfing',
       desc: 'Le winch surfing est l’une de nos activités préférées : sensations fortes garanties !'
@@ -178,9 +200,11 @@ explore the world of surfing and experienced riders looking to enhance their ski
       send: "Envoyer",
       success: "Votre message a été envoyé avec succès !",
     },
-    documents: {
-      title: "Documents",
-      subtitle: "Documents légaux",
+    "documents": {
+      "title": "Documents",
+      "subtitle": "Téléchargez les documents officiels de l'association",
+      "status": "Status de l'association",
+      "disclaimer": "Décharge USC Lausanne"
     },
     team: {
       title: "Notre Équipe",
@@ -224,6 +248,20 @@ explore the world of surfing and experienced riders looking to enhance their ski
       phototheque: "Photothèque",
       history: "Histoire"
     },
+    eventsPage: {
+      title: 'Événements',
+      intro: `Le club organise des événements spéciaux tout au long de l'année, offrant des moments uniques pour rassembler les membres et partager l'esprit du surf au-delà des activités régulières.`,
+    },
+
+    // --- PAGE GALERIE ---
+    gallery: {
+      title: "Photothèque",
+      subtitle: "Plongez dans les meilleurs souvenirs du club !",
+      empty: "Pas encore de photos. Restez à l'écoute pour les prochains événements et souvenirs.",
+      download: "Télécharger",
+      seeAll: "Tout voir",
+      close: "Fermer",
+    }
   },
 }
 

@@ -32,6 +32,8 @@ export default {
       menuItems: [
         { href: "/team", fr: "équipe", en: "team" },
         { href: "/history", fr: "histoire", en: "history" },
+        { href: "/gallery", fr: "photothèque", en: "gallery" },
+        { href: "/document", fr: "documents", en: "documents" },
         { href: "/contact", fr: "contact", en: "contact" },
         { href: "/join", fr: "join", en: "join" },
       ],

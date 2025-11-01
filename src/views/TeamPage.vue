@@ -20,15 +20,13 @@
             <div
               v-for="member in section.members"
               :key="member.name"
-              class="flex flex-col items-center bg-white p-4 rounded-lg shadow hover:shadow-lg border transition"
+              class="flex flex-row items-center bg-white p-4 rounded-lg shadow hover:shadow-lg border transition gap-4"
             >
-              <img
-                :src="member.image || '/src/assets/illu11.png'"
-                alt="member image"
-                class="w-32 h-32 object-cover rounded-full mb-4"
-              />
-              <p class="font-semibold">{{ member.name }}</p>
-              <p class="text-gray-600 text-sm text-center">{{ member.role }}</p>
+              <User class="w-16 h-16 text-gray-400" />
+              <div class="flex flex-col ">
+                <p class="font-semibold w-full">{{ member.name }}</p>
+                <p class="text-gray-700 text-sm w-full">{{ member.role }}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -44,6 +42,7 @@
   import HeaderPage from "@/components/Header.vue"
   import FooterPage from "@/components/Footer.vue"
   import { useI18n } from "vue-i18n"
+  import { User } from 'lucide-vue-next';
   
   // i18n
   const { t } = useI18n()

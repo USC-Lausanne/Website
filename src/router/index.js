@@ -9,7 +9,7 @@ import HistoryView from '@/views/HistoryPage.vue'
 import ContactView from '@/views/ContactPage.vue'
 import DocumentView from '@/views/DocumentPage.vue'
 import TeamView from '@/views/TeamPage.vue'
-import NetworkView from '@/views/NetworkPage.vue'
+import GalleryPage from '@/views/GalleryPage.vue'
 
 const routes = [
   { path: '/', name: 'Home', component: HomePage },
@@ -22,7 +22,7 @@ const routes = [
   { path: '/contact', name: 'Contact', component: ContactView },
   { path: '/document', name: 'Document', component: DocumentView },
   { path: '/team', name: 'Team', component: TeamView },
-  { path: '/network', name: 'Network', component: NetworkView },
+  { path: '/gallery', name: 'Gallery', component: GalleryPage },
 ]
 
 const router = createRouter({

@@ -35,10 +35,10 @@
 
     <div class="h-16"></div>
 
-    <section class="text-center px-6">
-      <h2 class="text-3xl font-bold mb-6">{{ t('calendar') }}</h2>
-      <CalendarComponent />
-    </section>
+    <div class="flex justify-center my-20">
+      <InstagramButton />
+    </div>
+
   </main>
 
   <FooterPage />
@@ -47,7 +47,7 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
 import ActivityCard from '@/components/ActivityCard.vue'
-import CalendarComponent from '@/components/CalendarComponent.vue'
+import InstagramButton from '@/components/InstagramButton.vue'
 import HeaderPage from "@/components/Header.vue";
 import FooterPage from '@/components/Footer.vue'
 
