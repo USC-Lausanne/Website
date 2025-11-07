@@ -35,21 +35,13 @@ This website is built with:
 
 ## 🖼️ Tech Logos
 
-![Vite Logo](https://placeholder.com/vite-logo.png)  
-![Tailwind CSS Logo](https://placeholder.com/tailwindcss-logo.png)  
-![Vue.js Logo](https://placeholder.com/vuejs-logo.png)  
-![PHP Logo](https://placeholder.com/php-logo.png)  
-![MySQL Logo](https://placeholder.com/mysql-logo.png)
-
----
-
-## 🚀 Features
-
-- 🎉 Homepage with events and news  
-- 📅 Events calendar  
-- 📷 Media gallery  
-- 📄 Resources and documentation  
-- 📬 Contact form  
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vitejs-logo.svg" alt="Vite Logo" width="60" height="60" style="margin: 0 15px;" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="Tailwind CSS Logo" width="60" height="60" style="margin: 0 15px;" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg" alt="Vue.js Logo" width="60" height="60" style="margin: 0 15px;" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP Logo" width="60" height="60" style="margin: 0 15px;" />
+  <img src="https://upload.wikimedia.org/wikipedia/en/6/62/MySQL.svg" alt="MySQL Logo" width="60" height="60" style="margin: 0 15px;" />
+</p>
 
 ---
 
@@ -68,36 +60,14 @@ public/
 └── favicon.ico    # Site favicon
 ```
 
-
----
-
-## ⚙️ Installation & Setup
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/usc-lausanne.git
-   cd usc-lausanne/www
-   ```
-
-2. Configure your local server (e.g., MAMP, WAMP, XAMPP) and point the root directory to `/www`.
-
-3. Set up the database:
-   - Import the SQL file located in `/config/db_init.sql` into phpMyAdmin.
-   - Update `config/db.php` with your credentials.
-
-4. Open in your browser:
-   ```
-   http://localhost/usc-lausanne
-   ```
-
 ---
 
 ## 📖 Architecture Decision Records (ADRs)
 
 We maintain a set of Architecture Decision Records to document important decisions and rationale for the project. Please take a moment to review them to better understand our development process.
 
-- [ADR 001: Git Workflow](./adr/001-git-workflow.md)  
-- [ADR 002: Website Update Strategy](./adr/002-website-update-strategy.md)
+- [ADR 001: Git Workflow](./adr/001-git-best-practices.md)  
+- [ADR 002: Website Update Strategy](./adr/002-update-Website.md)
 
 ---
 

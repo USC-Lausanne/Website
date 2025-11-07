@@ -6,6 +6,25 @@ Accepted
 ## Context
 To ensure consistent and reliable development and deployment of the USC Lausanne website, a clear process needs to be established. This process should cover the installation of dependencies, running the development server, building the production version, deploying the site, and managing version control.
 
+## ⚙️ Installation & Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/usc-lausanne.git
+   cd usc-lausanne/www
+   ```
+
+2. Configure your local server (e.g., MAMP, WAMP, XAMPP) and point the root directory to `/www`.
+
+3. Set up the database:
+   - Import the SQL file located in `/config/db_init.sql` into phpMyAdmin.
+   - Update `config/db.php` with your credentials.
+
+4. Open in your browser:
+   ```
+   http://localhost/usc-lausanne
+   ```
+
 ## Decision
 The following commands and steps will be used for developing and deploying the USC Lausanne website:
 
