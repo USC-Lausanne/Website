@@ -3,7 +3,7 @@
   <header class="bg-white mb-8">
     <div class="flex justify-between items-center px-8 py-4">
       <!-- Logo -->
-      <a href="/" class="flex-shrink-0">
+      <a href="/" class="shrink-0">
         <img src="/src/assets/logo.jpeg" alt="logo USC Lausanne" class="h-20 w-auto hover:opacity-80 transition-opacity" />
       </a>
 
