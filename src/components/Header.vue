@@ -9,16 +9,16 @@
 
       <!-- Menu -->
       <nav class="hidden md:flex gap-8">
-        <a
+        <router-link
           v-for="item in menuItems"
           :key="item.href"
-          :href="item.href"
+          :to="item.href"
           class="font-semibold text-gray-800 hover:text-sky-600 transition-colors"
           :data-fr="item.fr"
           :data-en="item.en"
         >
           {{ item.en }}
-        </a>
+        </router-link>
       </nav>
     </div>
   </header>

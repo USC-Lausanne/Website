@@ -50,13 +50,17 @@ import ActivityCard from '@/components/ActivityCard.vue'
 import InstagramButton from '@/components/InstagramButton.vue'
 import HeaderPage from "@/components/Header.vue";
 import FooterPage from '@/components/Footer.vue'
+import photo1 from '@/assets/photo_index_1.jpeg'
+import photo2 from '@/assets/photo_index_2.jpeg'
+import photo3 from '@/assets/photo_index_3.jpeg'
+import photo4 from '@/assets/photo_index_4.jpeg'
 
 const { t } = useI18n()
 
 const activities = [
-  { title: 'winch.title', desc: 'winch.desc', image: '/Website/assets/photo_index_1.jpeg', to: "/winch" },
-  { title: 'pump.title', desc: 'pump.desc', image: '/Website/assets/photo_index_2.jpeg', to: "/pump" },
-  { title: 'skate.title', desc: 'skate.desc', image: '/Website/assets/photo_index_3.jpeg', to: "/surfskate" },
-  { title: 'events.title', desc: 'events.desc', image: '/Website/assets/photo_index_4.jpeg', to: "/events" }
+  { title: 'winch.title', desc: 'winch.desc', image: photo1, to: "/winch" },
+  { title: 'pump.title', desc: 'pump.desc', image: photo2, to: "/pump" },
+  { title: 'skate.title', desc: 'skate.desc', image: photo3, to: "/surfskate" },
+  { title: 'events.title', desc: 'events.desc', image: photo4, to: "/events" }
 ]
 </script>
