@@ -96,3 +96,29 @@ See the [LICENSE](./LICENSE) file for more details.
 
 - Thanks to the founding members of USC Lausanne 🌊  
 - Inspired by the surf community worldwide 🏄‍♀️
+
+
+## Development
+
+```
+rm -rf node_modules package-lock.json
+npm install
+```
+
+```
+npm run dev
+```
+
+
+## Deployement 
+
+```
+npm run build
+npm run deploy
+```
+
+```
+git add .
+git commit -m ""
+git push origin main
+```
