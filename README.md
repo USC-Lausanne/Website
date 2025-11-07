@@ -24,23 +24,24 @@ Always in a friendly and relaxed atmosphere!
 
 ## 🛠️ Tech Stack
 
-This website is built with:
-
-- **Frontend**: HTML5, CSS3, JavaScript  
-- **Backend**: PHP  
-- **Database**: MySQL  
-- **Hosting**: OVH (with phpMyAdmin for DB management)
-
----
-
-## 🖼️ Tech Logos
-
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vitejs-logo.svg" alt="Vite Logo" width="60" height="60" style="margin: 0 15px;" />
-  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="Tailwind CSS Logo" width="60" height="60" style="margin: 0 15px;" />
-  <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg" alt="Vue.js Logo" width="60" height="60" style="margin: 0 15px;" />
-  <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP Logo" width="60" height="60" style="margin: 0 15px;" />
-  <img src="https://upload.wikimedia.org/wikipedia/en/6/62/MySQL.svg" alt="MySQL Logo" width="60" height="60" style="margin: 0 15px;" />
+  <a href="https://vitejs.dev/" target="_blank">
+    <img src="https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white&style=for-the-badge" alt="Vite" />
+  </a>
+  <a href="https://tailwindcss.com/" target="_blank">
+    <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white&style=for-the-badge" alt="Tailwind CSS" />
+  </a>
+  <a href="https://vuejs.org/" target="_blank">
+    <img src="https://img.shields.io/badge/Vue.js-42B883?logo=vue.js&logoColor=white&style=for-the-badge" alt="Vue.js" />
+  </a>
+  <a href="https://www.php.net/" target="_blank">
+    <img src="https://img.shields.io/badge/PHP-777BB4?logo=php&logoColor=white&style=for-the-badge" alt="PHP" />
+  </a>
+  <a href="https://www.mysql.com/" target="_blank">
+    <img src="https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white&style=for-the-badge" alt="MySQL" />
+  </a>
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License: MIT" />
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" alt="Project Status" />
 </p>
 
 ---
