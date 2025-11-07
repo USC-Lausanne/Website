@@ -54,9 +54,9 @@ import FooterPage from '@/components/Footer.vue'
 const { t } = useI18n()
 
 const activities = [
-  { title: 'winch.title', desc: 'winch.desc', image: '@/assets/photo_index_1.jpeg', to: "/winch" },
-  { title: 'pump.title', desc: 'pump.desc', image: '@/assets/photo_index_2.jpeg', to: "/pump" },
-  { title: 'skate.title', desc: 'skate.desc', image: '@/assets/photo_index_3.jpeg', to: "/surfskate" },
-  { title: 'events.title', desc: 'events.desc', image: '@/assets/photo_index_4.jpeg', to: "/events" }
+  { title: 'winch.title', desc: 'winch.desc', image: '/Website/src/assets/photo_index_1.jpeg', to: "/winch" },
+  { title: 'pump.title', desc: 'pump.desc', image: '/Website/src/assets/photo_index_2.jpeg', to: "/pump" },
+  { title: 'skate.title', desc: 'skate.desc', image: '/Website/src/assets/photo_index_3.jpeg', to: "/surfskate" },
+  { title: 'events.title', desc: 'events.desc', image: '/Website/src/assets/photo_index_4.jpeg', to: "/events" }
 ]
 </script>
