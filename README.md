@@ -1,3 +1,5 @@
+**Note:** The website is directly accessible online at [https://usc-lausanne.github.io/Website/](https://usc-lausanne.github.io/Website/)
+
 # 🌐 USC Lausanne Website
 
 Welcome to the official repository for the **USC Lausanne** website!  
@@ -31,6 +33,16 @@ This website is built with:
 
 ---
 
+## 🖼️ Tech Logos
+
+![Vite Logo](https://placeholder.com/vite-logo.png)  
+![Tailwind CSS Logo](https://placeholder.com/tailwindcss-logo.png)  
+![Vue.js Logo](https://placeholder.com/vuejs-logo.png)  
+![PHP Logo](https://placeholder.com/php-logo.png)  
+![MySQL Logo](https://placeholder.com/mysql-logo.png)
+
+---
+
 ## 🚀 Features
 
 - 🎉 Homepage with events and news  
@@ -41,16 +53,21 @@ This website is built with:
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Directory Structure
 
 ```bash
-www/
-├── assets/        # Images, CSS, JavaScript
-├── components/    # Reusable PHP components (header, footer, forms, etc.)
-├── pages/         # Individual pages (home, about, events, etc.)
-├── config/        # Database configuration
-└── index.php      # Main entry point
+src/
+├── assets/        # Static assets like images, fonts, and styles
+├── components/    # Reusable Vue components (buttons, cards, modals, etc.)
+├── views/         # Vue pages corresponding to routes (Home.vue, About.vue, Events.vue, etc.)
+├── router/        # Vue Router configuration files
+├── App.vue        # Root Vue component
+├── main.css       # Tailwind importation
+└── main.js        # Application entry point
+public/
+└── favicon.ico    # Site favicon
 ```
+
 
 ---
 
@@ -75,6 +92,15 @@ www/
 
 ---
 
+## 📖 Architecture Decision Records (ADRs)
+
+We maintain a set of Architecture Decision Records to document important decisions and rationale for the project. Please take a moment to review them to better understand our development process.
+
+- [ADR 001: Git Workflow](./adr/001-git-workflow.md)  
+- [ADR 002: Website Update Strategy](./adr/002-website-update-strategy.md)
+
+---
+
 ## 🤝 Contributing
 
 We welcome contributions!  
@@ -96,29 +122,3 @@ See the [LICENSE](./LICENSE) file for more details.
 
 - Thanks to the founding members of USC Lausanne 🌊  
 - Inspired by the surf community worldwide 🏄‍♀️
-
-
-## Development
-
-```
-rm -rf node_modules package-lock.json
-npm install
-```
-
-```
-npm run dev
-```
-
-
-## Deployement 
-
-```
-npm run build
-npm run deploy
-```
-
-```
-git add .
-git commit -m ""
-git push origin main
-```
