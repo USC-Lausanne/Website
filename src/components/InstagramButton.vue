@@ -4,13 +4,13 @@
       target="_blank"
       rel="noopener noreferrer"
       class="group relative inline-flex items-center justify-center gap-3 px-6 py-3 
-             rounded-full text-white font-semibold transition-all duration-500 ease-out 
-             bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 
+             rounded-xl text-white font-semibold transition-all duration-500 ease-out 
+             bg-linear-to-r from-pink-500 via-red-500 to-yellow-500 
              shadow-lg hover:shadow-2xl hover:scale-105 overflow-hidden"
     >
       <!-- Effet lumineux animé -->
       <span
-        class="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-white/20 
+        class="absolute inset-0 bg-linear-to-r from-white/20 via-transparent to-white/20 
                opacity-0 group-hover:opacity-100 animate-gradient-move"
       ></span>
   

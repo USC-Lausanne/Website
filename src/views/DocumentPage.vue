@@ -1,44 +1,46 @@
 <template>
-  <div class="min-h-screen flex flex-col">
+  <div class="min-h-screen flex flex-col dark:bg-gray-900 dark:text-gray-200">
     <!-- Header -->
     <HeaderPage />
 
     <!-- Main content -->
-    <main class="flex-grow flex flex-col items-center py-16 px-4 space-y-10">
-
-      <div class="text-center space-y-2">
-        <h1 class="text-4xl font-bold">{{ $t('documents.title') }}</h1>
-        <p class="text-gray-600">{{ $t('documents.subtitle') }}</p>
+    <main class="grow flex flex-col items-center py-16 px-6 max-w-5xl mx-auto w-full space-y-20 dark:bg-gray-900">
+      <div class="text-center space-y-3">
+        <h1 class="text-3xl font-extrabold text-gray-900 dark:text-gray-200">{{ t('documents.title') }}</h1>
+        <p class="text-lg text-gray-600 dark:text-gray-400 max-w-xl mx-auto">{{ t('documents.subtitle') }}</p>
       </div>
 
-      <div class="w-full max-w-md flex flex-col gap-6">
-        <!-- Status document -->
-        <a
-          href="/src/documents/Status.pdf"
-          download="Status.pdf"
-          class="flex items-center justify-between p-4 bg-white rounded-lg border shadow hover:shadow-lg transition"
-        >
-          <div class="flex items-center gap-4">
-            <FileDown class="w-8 h-8 text-sky-500" />
-            <span class="font-medium text-gray-800">{{ $t('documents.status') }}</span>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full">
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md dark:shadow-gray-800 hover:shadow-xl transition-shadow p-6 flex flex-col">
+          <div class="flex items-center space-x-4 mb-4">
+            <FileDown class="w-10 h-10 text-sky-600" />
+            <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-200">{{ t('documents.status') }}</h2>
           </div>
-          <span class="text-sky-500 font-semibold">Download</span>
-        </a>
+          <a
+            href="/Website/src/documents/Status.pdf"
+            download="Status.pdf"
+            class="mt-6 inline-flex items-center justify-center rounded-md bg-sky-600 dark:bg-sky-700 px-5 py-3 text-white font-medium hover:bg-sky-700 dark:hover:bg-sky-800 transition"
+            aria-label="Download Status PDF"
+          >
+            Download
+          </a>
+        </div>
 
-        <!-- Décharge document -->
-        <a
-          href="/src/documents/USCLausanneDecharge.pdf"
-          download="USCLausanneDecharge.pdf"
-          class="flex items-center justify-between p-4 bg-white rounded-lg border shadow hover:shadow-lg transition"
-        >
-          <div class="flex items-center gap-4">
-            <FileDown class="w-8 h-8 text-sky-500" />
-            <span class="font-medium text-gray-800">{{ $t('documents.disclaimer') }}</span>
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md dark:shadow-gray-800 hover:shadow-xl transition-shadow p-6 flex flex-col">
+          <div class="flex items-center space-x-4 mb-4">
+            <FileDown class="w-10 h-10 text-sky-600" />
+            <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-200">{{ t('documents.disclaimer') }}</h2>
           </div>
-          <span class="text-sky-500 font-semibold">Download</span>
-        </a>
+          <a
+            href="/Website/src/documents/USCLausanneDecharge.pdf"
+            download="USCLausanneDecharge.pdf"
+            class="mt-6 inline-flex items-center justify-center rounded-md bg-sky-600 dark:bg-sky-700 px-5 py-3 text-white font-medium hover:bg-sky-700 dark:hover:bg-sky-800 transition"
+            aria-label="Download Disclaimer PDF"
+          >
+            Download
+          </a>
+        </div>
       </div>
-
     </main>
 
     <!-- Footer -->

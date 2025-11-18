@@ -1,5 +1,4 @@
-
-# 0009 - Git Command Workflow
+# 0001 - Git Command Workflow
 
 ## Status
 **ACCEPTED** - This document outlines the standardized Git workflow for all team members.

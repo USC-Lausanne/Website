@@ -54,6 +54,7 @@ src/
 ├── components/    # Reusable Vue components (buttons, cards, modals, etc.)
 ├── views/         # Vue pages corresponding to routes (Home.vue, About.vue, Events.vue, etc.)
 ├── router/        # Vue Router configuration files
+├── documents/     # documents pdf
 ├── App.vue        # Root Vue component
 ├── main.css       # Tailwind importation
 └── main.js        # Application entry point
@@ -84,8 +85,8 @@ Here’s how you can help:
 
 ## 📜 License
 
-This project is licensed under the **MIT License**.  
-See the [LICENSE](./LICENSE) file for more details.
+This project is licensed under the **MIT License**, which allows anyone to freely use, modify, and redistribute it.  
+See the [LICENSE](./LICENSE) file for details.
 
 ---
 

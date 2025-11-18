@@ -33,6 +33,11 @@ explore the world of surfing and experienced riders looking to enhance their ski
       desc: 'We also organise a range of special events — from wake surfing to lively parties!'
     },
 
+    gallery: {
+      title: "Gallery",
+      subtitle:"Discover some of our best shots and access our Lightroom files."
+    },
+
     // --- SURFSKATE PAGE ---
     surfskate: {
       switchLang: 'Français',
@@ -51,14 +56,14 @@ explore the world of surfing and experienced riders looking to enhance their ski
       history_events_title: "History Events",
       history_events_intro: "We strive to offer three sports activities per week from the end of March to the beginning of July, and then again from the beginning of September to mid-November. In addition to these regular sessions, we also aim to organize larger events. Some of these included:",
       events: [
-        { date: '22 March 2024', title: 'Discovery Session - Esplanade (EPFL)', desc: 'To introduce ourselves, we organized a discovery session in the heart of campus, where people could try surfskating and enjoy delicious Tony Mate.' },
-        { date: '12 April 2024', title: 'Apéro Bowl - Vidy', desc: 'This was our first major event, with over 100 participants. In the afternoon, attendees took surfskate lessons and shredded with Red Bulls, followed by an apéro with free beers and great music.' },
-        { date: '20 April 2024', title: 'First Water Session - Vidy', desc: 'Our first-ever water activity! Despite the 12°C water, our members weren’t discouraged and spent more than four hours foil surfing.' },
-        { date: '27 April 2024', title: 'First Winch Session - Discovery for All (Sports Center)', desc: 'We hosted our first winch session, open to everyone, and even had people outside the club trying it for the first time.' },
-        { date: '31 May 2024', title: 'Wakesurf Session - St-Sulpice', desc: 'In collaboration with W School, we organized an afternoon of wakesurfing followed by an apéro. We also sold delicious homemade cookies by none other than our designer, Nouchine Bouchiat.' },
-        { date: '11 December 2024', title: 'First Merch Drop', desc: 'Thanks to Paul Vannoye and CoastLine, we launched our first line of merchandise, t-shirts and tote bags for sale, and exclusive sweaters for the committee.' },
+        { date: '15 May 2025', title: 'ESN x USC - Vidy', desc: 'In collaboration with ESN Lausanne, we organized an afternoon (4 PM to 8 PM) of activities for 20–30 Erasmus students. They rotated through surfskating, pump foiling, and winch surfing sessions.' },
         { date: '27 March 2025', title: 'Sound & Swell - St-Sulpice', desc: 'We rented a venue and threw a party from 10 PM to 3 AM with over 100 paid entries. The night featured 4 DJs and non-stop food and drinks throughout the entire event.' },
-        { date: '15 May 2025', title: 'ESN x USC - Vidy', desc: 'In collaboration with ESN Lausanne, we organized an afternoon (4 PM to 8 PM) of activities for 20–30 Erasmus students. They rotated through surfskating, pump foiling, and winch surfing sessions.' }
+        { date: '11 December 2024', title: 'First Merch Drop', desc: 'Thanks to Paul Vannoye and CoastLine, we launched our first line of merchandise, t-shirts and tote bags for sale, and exclusive sweaters for the committee.' },
+        { date: '31 May 2024', title: 'Wakesurf Session - St-Sulpice', desc: 'In collaboration with W School, we organized an afternoon of wakesurfing followed by an apéro. We also sold delicious homemade cookies by none other than our designer, Nouchine Bouchiat.' },
+        { date: '27 April 2024', title: 'First Winch Session - Discovery for All (Sports Center)', desc: 'We hosted our first winch session, open to everyone, and even had people outside the club trying it for the first time.' },
+        { date: '20 April 2024', title: 'First Water Session - Vidy', desc: 'Our first-ever water activity! Despite the 12°C water, our members weren’t discouraged and spent more than four hours foil surfing.' },
+        { date: '12 April 2024', title: 'Apéro Bowl - Vidy', desc: 'This was our first major event, with over 100 participants. In the afternoon, attendees took surfskate lessons and shredded with Red Bulls, followed by an apéro with free beers and great music.' },
+        { date: '22 March 2024', title: 'Discovery Session - Esplanade (EPFL)', desc: 'To introduce ourselves, we organized a discovery session in the heart of campus, where people could try surfskating and enjoy delicious Tony Mate.' }
       ],
       noEvents: "No events available yet.",
     },
@@ -163,6 +168,11 @@ explore the world of surfing and experienced riders looking to enhance their ski
       desc: 'Nous organisons des événements : wake surf, apéros et soirées animées !'
     },
 
+    gallery: {
+      title: "Photothèque",
+      subtitle:"Découvrez quelques-unes de nos meilleures prises de vue et accédez à nos dossiers Lightroom."
+    },
+
     // --- PAGE SURFSKATE ---
     surfskate: {
       switchLang: 'English',
@@ -181,14 +191,14 @@ explore the world of surfing and experienced riders looking to enhance their ski
       history_events_title: "Événements passés",
       history_events_intro: "Nous nous efforçons de proposer trois activités sportives par semaine de fin mars à début juillet, puis de début septembre à mi-novembre. En plus de ces sessions régulières, nous visons également à organiser des événements plus importants. En voici quelques-uns :",
       events: [
-        { date: '22 mars 2024', title: 'Séance découverte - Esplanade (EPFL)', desc: 'Pour se présenter, nous avons organisé une séance découverte au cœur du campus où les participants ont pu essayer le surfskate et savourer le délicieux Tony Mate.' },
-        { date: '12 avril 2024', title: 'Apéro Bowl - Vidy', desc: 'Il s’agissait de notre premier grand événement avec plus de 100 participants. L’après-midi, les participants ont pris des cours de surfskate et ont profité des Red Bulls, suivis d’un apéro avec bières gratuites et de la bonne musique.' },
-        { date: '20 avril 2024', title: 'Première session eau - Vidy', desc: 'Notre toute première activité aquatique ! Malgré l’eau à 12°C, nos membres n’ont pas été découragés et ont passé plus de quatre heures à foil surfer.' },
-        { date: '27 avril 2024', title: 'Première session Winch - Découverte pour tous (Centre sportif)', desc: 'Nous avons organisé notre première session Winch, ouverte à tous, avec même des personnes extérieures au club essayant pour la première fois.' },
-        { date: '31 mai 2024', title: 'Session Wakesurf - St-Sulpice', desc: 'En collaboration avec W School, nous avons organisé un après-midi de wakesurf suivi d’un apéro. Nous avons également vendu de délicieux cookies faits maison par notre designer, Nouchine Bouchiat.' },
-        { date: '11 décembre 2024', title: 'Premier drop merchandising', desc: 'Grâce à Paul Vannoye et CoastLine, nous avons lancé notre première ligne de merchandising, t-shirts et tote bags à vendre, et des pulls exclusifs pour le comité.' },
+        { date: '15 mai 2025', title: 'ESN x USC - Vidy', desc: 'En collaboration avec ESN Lausanne, nous avons organisé un après-midi (16h à 20h) d’activités pour 20–30 étudiants Erasmus. Ils ont alterné entre surfskate, pump foil et winch surfing.' },
         { date: '27 mars 2025', title: 'Sound & Swell - St-Sulpice', desc: 'Nous avons loué un lieu et organisé une soirée de 22h à 3h avec plus de 100 entrées payantes. La soirée a comporté 4 DJs et de la nourriture et des boissons non-stop.' },
-        { date: '15 mai 2025', title: 'ESN x USC - Vidy', desc: 'En collaboration avec ESN Lausanne, nous avons organisé un après-midi (16h à 20h) d’activités pour 20–30 étudiants Erasmus. Ils ont alterné entre surfskate, pump foil et winch surfing.' }
+        { date: '11 décembre 2024', title: 'Premier drop merchandising', desc: 'Grâce à Paul Vannoye et CoastLine, nous avons lancé notre première ligne de merchandising, t-shirts et tote bags à vendre, et des pulls exclusifs pour le comité.' },
+        { date: '31 mai 2024', title: 'Session Wakesurf - St-Sulpice', desc: 'En collaboration avec W School, nous avons organisé un après-midi de wakesurf suivi d’un apéro. Nous avons également vendu de délicieux cookies faits maison par notre designer, Nouchine Bouchiat.' },
+        { date: '27 avril 2024', title: 'Première session Winch - Découverte pour tous (Centre sportif)', desc: 'Nous avons organisé notre première session Winch, ouverte à tous, avec même des personnes extérieures au club essayant pour la première fois.' },
+        { date: '20 avril 2024', title: 'Première session eau - Vidy', desc: 'Notre toute première activité aquatique ! Malgré l’eau à 12°C, nos membres n’ont pas été découragés et ont passé plus de quatre heures à foil surfer.' },
+        { date: '12 avril 2024', title: 'Apéro Bowl - Vidy', desc: 'Il s’agissait de notre premier grand événement avec plus de 100 participants. L’après-midi, les participants ont pris des cours de surfskate et ont profité des Red Bulls, suivis d’un apéro avec bières gratuites et de la bonne musique.' },
+        { date: '22 mars 2024', title: 'Séance découverte - Esplanade (EPFL)', desc: 'Pour se présenter, nous avons organisé une séance découverte au cœur du campus où les participants ont pu essayer le surfskate et savourer le délicieux Tony Mate.' }
       ],
       noEvents: "Aucun événement pour le moment.",
     },
