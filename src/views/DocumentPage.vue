@@ -17,7 +17,7 @@
             <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-200">{{ t('documents.status') }}</h2>
           </div>
           <a
-            href="/Website/src/documents/Status.pdf"
+            href="./Status.pdf"
             download="Status.pdf"
             class="mt-6 inline-flex items-center justify-center rounded-md bg-sky-600 dark:bg-sky-700 px-5 py-3 text-white font-medium hover:bg-sky-700 dark:hover:bg-sky-800 transition"
             aria-label="Download Status PDF"
@@ -32,7 +32,7 @@
             <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-200">{{ t('documents.disclaimer') }}</h2>
           </div>
           <a
-            href="/Website/src/documents/USCLausanneDecharge.pdf"
+            href="./USCLausanneDecharge.pdf"
             download="USCLausanneDecharge.pdf"
             class="mt-6 inline-flex items-center justify-center rounded-md bg-sky-600 dark:bg-sky-700 px-5 py-3 text-white font-medium hover:bg-sky-700 dark:hover:bg-sky-800 transition"
             aria-label="Download Disclaimer PDF"

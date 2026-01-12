@@ -16,6 +16,8 @@
         />
       </section>
   
+      <div class="h-16"></div>
+  
       <section class="px-6 max-w-6xl dark:bg-gray-900">
         <h2 class="text-3xl font-bold mb-8 dark:text-gray-200">{{ t('activities') }}</h2>
   
@@ -30,6 +32,8 @@
           />
         </div>
       </section>
+  
+      <div class="h-16"></div>
   
       <div class="flex justify-center my-20">
         <InstagramButton />
