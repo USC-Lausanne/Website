@@ -58,8 +58,7 @@
 
         </form>
 
-        <!-- Message de succès -->
-        <p v-if="success" class="mt-4 text-green-600 dark:text-green-400 font-medium text-center">{{ $t('contact.success') }}</p>
+        <p v-if="error" class="mt-4 text-red-600 dark:text-red-400 font-medium text-center" role="alert">{{ $t('contact.error') }}</p>
       </div>
     </main>
 
@@ -85,13 +84,9 @@ const form = reactive({
   message: '',
 })
 
-const success = ref(false)
+const error = ref(false)
 
 function handleSubmit() {
-  console.log('Form submitted', form)
-  success.value = true
-  form.name = ''
-  form.email = ''
-  form.message = ''
+  error.value = true
 }
 </script>
