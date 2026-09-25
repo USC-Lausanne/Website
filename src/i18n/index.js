@@ -73,7 +73,7 @@ explore the world of surfing and experienced riders looking to enhance their ski
       email: "Email",
       message: "Message",
       send: "Send",
-      success: "Your message was sent successfully!",
+      error: "Your message could not be sent.",
     },
     documents: {      
       title: "Documents",      
@@ -110,7 +110,7 @@ explore the world of surfing and experienced riders looking to enhance their ski
       },
       stepsTitle: "A few steps to become a member",
       steps: [
-        { title: "Fill out the registration form", desc: 'Complete the form to start your membership: <a href="https://docs.google.com/forms/d/e/1FAIpQLSciu57BUXIPhuAFFxdfbBHsj4a_kJUY2bgOt8BcBQdLWB7L1Q/viewform?usp=dialog" target="_blank" style="text-decoration: underline;">Google Form</a>' },
+        { title: "Registrations are closed", desc: "Membership registration is closed. There is no open form to complete for this step." },
         { title: "Download and sign the document", desc: 'Download, sign, and submit your membership document: <a href="../assets/USC_Lausanne_Decharge_EN.pdf" target="_blank" style="text-decoration: underline;">Membership Info (PDF)</a>' },
         { title: "Enjoy the USC activities", desc: "After completing the steps, enjoy all the USC activities available to members!" }
       ]
@@ -208,7 +208,7 @@ explore the world of surfing and experienced riders looking to enhance their ski
       email: "Email",
       message: "Message",
       send: "Envoyer",
-      success: "Votre message a été envoyé avec succès !",
+      error: "Votre message n'a pas pu être envoyé.",
     },
     "documents": {
       "title": "Documents",
@@ -245,7 +245,7 @@ explore the world of surfing and experienced riders looking to enhance their ski
       },
       stepsTitle: "Quelques étapes pour devenir membre",
       steps: [
-        { title: "Remplissez le formulaire d'inscription", desc: 'Remplissez le formulaire pour commencer votre adhésion : <a href="https://docs.google.com/forms/d/e/1FAIpQLSciu57BUXIPhuAFFxdfbBHsj4a_kJUY2bgOt8BcBQdLWB7L1Q/viewform?usp=dialog" target="_blank" style="text-decoration: underline;">Google Formulaire</a>' },
+        { title: "Les inscriptions sont fermées", desc: "Les inscriptions sont fermées. Il n'y a pas de formulaire ouvert à remplir pour cette étape." },
         { title: "Téléchargez et signez le document", desc: 'Téléchargez, signez et soumettez votre document d adhésion : <a href="../assets/USC_Lausanne_Decharge_FR.pdf" target="_blank" style="text-decoration: underline;">Informations sur l adhésion (PDF)</a>' },
         { title: "Profitez des activités USC", desc: "Après avoir complété les étapes, profitez de toutes les activités de l'USC accessibles aux membres !" }
       ]
