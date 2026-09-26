@@ -16,7 +16,9 @@
   }
 
   .page-main {
-    @apply mx-auto w-full max-w-6xl flex-1 space-y-16 px-6 py-12 pb-24;
+    /* `break-words` hérite : une URL longue dans un texte juridique ne doit pas
+       forcer un défilement horizontal de la page. */
+    @apply mx-auto w-full max-w-6xl flex-1 space-y-16 px-6 py-12 pb-24 break-words;
   }
 
   /* Typographie ------------------------------------------------------------ */

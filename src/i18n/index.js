@@ -1,4 +1,5 @@
 import { createI18n } from 'vue-i18n'
+import { legalMessages } from './legal.js'
 
 const messages = {
   en: {
@@ -113,7 +114,7 @@ explore the world of surfing and experienced riders looking to enhance their ski
       email: "Email",
       message: "Message",
       send: "Send",
-      success: "Your message was sent successfully!",
+      error: "Your message could not be sent.",
     },
     documents: {      
       title: "Documents",      
@@ -151,7 +152,7 @@ explore the world of surfing and experienced riders looking to enhance their ski
       },
       stepsTitle: "A few steps to become a member",
       steps: [
-        { title: "Fill out the registration form", desc: 'Complete the form to start your membership: <a href="https://docs.google.com/forms/d/e/1FAIpQLSciu57BUXIPhuAFFxdfbBHsj4a_kJUY2bgOt8BcBQdLWB7L1Q/viewform?usp=dialog" target="_blank" style="text-decoration: underline;">Google Form</a>' },
+        { title: "Registrations are closed", desc: "Membership registration is closed. There is no open form to complete for this step." },
         { title: "Download and sign the document", desc: 'Download, sign, and submit your membership document: <a href="../assets/USC_Lausanne_Decharge_EN.pdf" target="_blank" style="text-decoration: underline;">Membership Info (PDF)</a>' },
         { title: "Enjoy the USC activities", desc: "After completing the steps, enjoy all the USC activities available to members!" }
       ]
@@ -162,8 +163,15 @@ explore the world of surfing and experienced riders looking to enhance their ski
       team: "Team",
       documents: "Documents",
       phototheque: "Gallery",
-      history: "History"
+      history: "History",
+      legalNav: "Legal",
+      mentions: "Legal notice",
+      privacy: "Privacy policy",
+      cookies: "Cookies",
+      terms: "Terms of use",
+      cgv: "Terms of sale",
     },
+    legal: legalMessages.en,
     eventsPage: {
       title: 'Events',
       intro: `The club organises special events throughout the year, offering unique moments to bring members together and share the spirit of surfing beyond regular activities.`,
@@ -289,7 +297,7 @@ explore the world of surfing and experienced riders looking to enhance their ski
       email: "Email",
       message: "Message",
       send: "Envoyer",
-      success: "Votre message a été envoyé avec succès !",
+      error: "Votre message n'a pas pu être envoyé.",
     },
     "documents": {
       "title": "Documents",
@@ -327,7 +335,7 @@ explore the world of surfing and experienced riders looking to enhance their ski
       },
       stepsTitle: "Quelques étapes pour devenir membre",
       steps: [
-        { title: "Remplissez le formulaire d'inscription", desc: 'Remplissez le formulaire pour commencer votre adhésion : <a href="https://docs.google.com/forms/d/e/1FAIpQLSciu57BUXIPhuAFFxdfbBHsj4a_kJUY2bgOt8BcBQdLWB7L1Q/viewform?usp=dialog" target="_blank" style="text-decoration: underline;">Google Formulaire</a>' },
+        { title: "Les inscriptions sont fermées", desc: "Les inscriptions sont fermées. Il n'y a pas de formulaire ouvert à remplir pour cette étape." },
         { title: "Téléchargez et signez le document", desc: 'Téléchargez, signez et soumettez votre document d adhésion : <a href="../assets/USC_Lausanne_Decharge_FR.pdf" target="_blank" style="text-decoration: underline;">Informations sur l adhésion (PDF)</a>' },
         { title: "Profitez des activités USC", desc: "Après avoir complété les étapes, profitez de toutes les activités de l'USC accessibles aux membres !" }
       ]
@@ -338,8 +346,15 @@ explore the world of surfing and experienced riders looking to enhance their ski
       team: "Équipe",
       documents: "Documents",
       phototheque: "Photothèque",
-      history: "Histoire"
+      history: "Histoire",
+      legalNav: "Informations légales",
+      mentions: "Mentions légales",
+      privacy: "Politique de confidentialité",
+      cookies: "Cookies",
+      terms: "CGU",
+      cgv: "CGV",
     },
+    legal: legalMessages.fr,
     eventsPage: {
       title: 'Événements',
       intro: `Le club organise des événements spéciaux tout au long de l'année, offrant des moments uniques pour rassembler les membres et partager l'esprit du surf au-delà des activités régulières.`,

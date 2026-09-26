@@ -49,8 +49,16 @@
           <button type="submit" class="btn btn-primary w-full">{{ $t('contact.send') }}</button>
         </form>
 
-        <p v-if="success" class="mt-4 text-center font-medium text-green-700 dark:text-green-400" role="status">
-          {{ $t('contact.success') }}
+        <!--
+          Aucun service d'envoi n'est branché : le formulaire annonce l'échec
+          plutôt que de simuler un succès. Voir 64d5a05.
+        -->
+        <p
+          v-if="error"
+          class="mt-4 text-center font-medium text-red-700 dark:text-red-400"
+          role="alert"
+        >
+          {{ $t('contact.error') }}
         </p>
       </section>
     </main>
@@ -69,12 +77,9 @@ const field =
   'w-full rounded-lg border border-gray-300 py-2.5 pr-4 pl-10 focus:border-gray-900 focus:outline-none dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:placeholder-gray-500 dark:focus:border-gray-200'
 
 const form = reactive({ name: '', email: '', message: '' })
-const success = ref(false)
+const error = ref(false)
 
 function handleSubmit() {
-  success.value = true
-  form.name = ''
-  form.email = ''
-  form.message = ''
+  error.value = true
 }
 </script>
