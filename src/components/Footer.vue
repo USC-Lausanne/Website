@@ -20,6 +20,17 @@
 
       <span class="mt-2 text-gray-700 dark:text-gray-300 text-sm">Copyright © 2025 USC Lausanne</span>
 
+      <nav class="flex flex-wrap gap-x-4 gap-y-2 text-sm" :aria-label="t('footer.legalNav')">
+        <router-link
+          v-for="link in legalLinks"
+          :key="link.to"
+          :to="link.to"
+          class="text-gray-700 dark:text-gray-300 hover:text-sky-600 dark:hover:text-sky-400 underline-offset-2 hover:underline"
+        >
+          {{ t(link.label) }}
+        </router-link>
+      </nav>
+
     </div>
   </footer>
 </template>
@@ -32,7 +43,15 @@ import logoDark from '/src/assets/logo_dark.png'
 import { Languages } from 'lucide-vue-next'
 
 // On force l’accès au scope global pour que locale soit réactive
-const { locale } = useI18n({ useScope: 'global' })
+const { t, locale } = useI18n({ useScope: 'global' })
+
+const legalLinks = [
+  { to: '/mentions', label: 'footer.mentions' },
+  { to: '/privacy', label: 'footer.privacy' },
+  { to: '/cookies', label: 'footer.cookies' },
+  { to: '/terms', label: 'footer.terms' },
+  { to: '/cgv', label: 'footer.cgv' },
+]
 
 // 🔹 Charger la langue sauvegardée au démarrage
 const savedLang = localStorage.getItem('locale')

@@ -1,4 +1,5 @@
 import { createI18n } from 'vue-i18n'
+import { legalMessages } from './legal.js'
 
 const messages = {
   en: {
@@ -121,8 +122,15 @@ explore the world of surfing and experienced riders looking to enhance their ski
       team: "Team",
       documents: "Documents",
       phototheque: "Gallery",
-      history: "History"
+      history: "History",
+      legalNav: "Legal",
+      mentions: "Legal notice",
+      privacy: "Privacy policy",
+      cookies: "Cookies",
+      terms: "Terms of use",
+      cgv: "Terms of sale",
     },
+    legal: legalMessages.en,
     eventsPage: {
       title: 'Events',
       intro: `The club organises special events throughout the year, offering unique moments to bring members together and share the spirit of surfing beyond regular activities.`,
@@ -256,8 +264,15 @@ explore the world of surfing and experienced riders looking to enhance their ski
       team: "Équipe",
       documents: "Documents",
       phototheque: "Photothèque",
-      history: "Histoire"
+      history: "Histoire",
+      legalNav: "Informations légales",
+      mentions: "Mentions légales",
+      privacy: "Politique de confidentialité",
+      cookies: "Cookies",
+      terms: "CGU",
+      cgv: "CGV",
     },
+    legal: legalMessages.fr,
     eventsPage: {
       title: 'Événements',
       intro: `Le club organise des événements spéciaux tout au long de l'année, offrant des moments uniques pour rassembler les membres et partager l'esprit du surf au-delà des activités régulières.`,
