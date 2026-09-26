@@ -1,2 +1,76 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------------------------------------------------------------------------
+   Direction artistique du site, en un seul endroit.
+
+   Filets gris clair plutôt que traits noirs, coins doux, ombres discrètes,
+   et une seule couleur d'accent — le bleu ciel — réservée aux liens. Tout le
+   reste est en gris neutres. Modifier une règle ici la propage à toutes les
+   pages.
+--------------------------------------------------------------------------- */
+@layer components {
+  /* Gabarit ---------------------------------------------------------------- */
+  .page-shell {
+    @apply flex min-h-screen flex-col bg-white dark:bg-gray-900 dark:text-gray-200;
+  }
+
+  .page-main {
+    @apply mx-auto w-full max-w-6xl flex-1 space-y-16 px-6 py-12 pb-24;
+  }
+
+  /* Typographie ------------------------------------------------------------ */
+  .page-title {
+    @apply text-3xl font-bold tracking-tight md:text-4xl dark:text-gray-200;
+  }
+
+  .page-lead {
+    @apply max-w-2xl leading-relaxed text-gray-700 dark:text-gray-400;
+  }
+
+  .section-title {
+    @apply text-2xl font-bold dark:text-gray-200;
+  }
+
+  .section-lead {
+    @apply max-w-2xl text-gray-700 dark:text-gray-400;
+  }
+
+  .body-text {
+    @apply leading-relaxed text-gray-700 dark:text-gray-400;
+  }
+
+  .meta-text {
+    @apply text-sm text-gray-500 dark:text-gray-400;
+  }
+
+  /* Surfaces --------------------------------------------------------------- */
+  .card {
+    @apply rounded-lg border border-gray-200 p-5 dark:border-gray-700 dark:bg-gray-800;
+  }
+
+  .panel {
+    @apply rounded-lg bg-gray-50 p-6 sm:p-8 dark:bg-gray-800/50;
+  }
+
+  .photo {
+    @apply rounded-lg shadow-sm;
+  }
+
+  /* Actions ---------------------------------------------------------------- */
+  .btn {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 dark:focus-visible:outline-gray-200;
+  }
+
+  .btn-primary {
+    @apply bg-gray-900 text-white hover:bg-gray-700 dark:bg-gray-100 dark:text-gray-900 dark:hover:bg-white;
+  }
+
+  .btn-secondary {
+    @apply border border-gray-300 text-gray-800 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800;
+  }
+
+  .link-accent {
+    @apply font-semibold text-sky-700 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300;
+  }
+}

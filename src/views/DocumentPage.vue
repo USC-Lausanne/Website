@@ -1,49 +1,26 @@
 <template>
-  <div class="min-h-screen flex flex-col dark:bg-gray-900 dark:text-gray-200">
-    <!-- Header -->
+  <div class="page-shell">
     <HeaderPage />
 
-    <!-- Main content -->
-    <main class="grow flex flex-col items-center py-16 px-6 max-w-5xl mx-auto w-full space-y-20 dark:bg-gray-900">
-      <div class="text-center space-y-3">
-        <h1 class="text-3xl font-extrabold text-gray-900 dark:text-gray-200">{{ t('documents.title') }}</h1>
-        <p class="text-lg text-gray-600 dark:text-gray-400 max-w-xl mx-auto">{{ t('documents.subtitle') }}</p>
-      </div>
+    <main class="page-main">
+      <section>
+        <h1 class="page-title">{{ t('documents.title') }}</h1>
+        <p class="page-lead mt-4">{{ t('documents.subtitle') }}</p>
+      </section>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full">
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md dark:shadow-gray-800 hover:shadow-xl transition-shadow p-6 flex flex-col">
-          <div class="flex items-center space-x-4 mb-4">
-            <FileDown class="w-10 h-10 text-sky-600" />
-            <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-200">{{ t('documents.status') }}</h2>
-          </div>
-          <a
-            href="./Status.pdf"
-            download="Status.pdf"
-            class="mt-6 inline-flex items-center justify-center rounded-md bg-sky-600 dark:bg-sky-700 px-5 py-3 text-white font-medium hover:bg-sky-700 dark:hover:bg-sky-800 transition"
-            aria-label="Download Status PDF"
-          >
-            Download
-          </a>
-        </div>
-
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md dark:shadow-gray-800 hover:shadow-xl transition-shadow p-6 flex flex-col">
-          <div class="flex items-center space-x-4 mb-4">
-            <FileDown class="w-10 h-10 text-sky-600" />
-            <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-200">{{ t('documents.disclaimer') }}</h2>
-          </div>
-          <a
-            href="./USCLausanneDecharge.pdf"
-            download="USCLausanneDecharge.pdf"
-            class="mt-6 inline-flex items-center justify-center rounded-md bg-sky-600 dark:bg-sky-700 px-5 py-3 text-white font-medium hover:bg-sky-700 dark:hover:bg-sky-800 transition"
-            aria-label="Download Disclaimer PDF"
-          >
-            Download
-          </a>
-        </div>
-      </div>
+      <section :aria-label="t('documents.title')">
+        <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <li v-for="doc in documents" :key="doc.file" class="card flex flex-col">
+            <FileDown class="h-6 w-6 text-gray-400" aria-hidden="true" />
+            <h2 class="mt-3 font-semibold dark:text-gray-200">{{ t(doc.title) }}</h2>
+            <a :href="`./${doc.file}`" :download="doc.file" class="btn btn-secondary mt-6 self-start">
+              {{ t('documents.download') }}
+            </a>
+          </li>
+        </ul>
+      </section>
     </main>
 
-    <!-- Footer -->
     <FooterPage />
   </div>
 </template>
@@ -55,4 +32,9 @@ import { FileDown } from 'lucide-vue-next'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
+
+const documents = [
+  { title: 'documents.status', file: 'Status.pdf' },
+  { title: 'documents.disclaimer', file: 'USCLausanneDecharge.pdf' },
+]
 </script>

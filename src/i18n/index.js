@@ -119,7 +119,8 @@ explore the world of surfing and experienced riders looking to enhance their ski
       title: "Documents",      
       subtitle: "Download the association's official documents",
       status: "Association status",      
-      disclaimer: "USC Lausanne disclaimer"    
+      disclaimer: "USC Lausanne disclaimer",
+      download: "Download"
     },
     team: {
       title: "Our Team",
@@ -294,7 +295,8 @@ explore the world of surfing and experienced riders looking to enhance their ski
       "title": "Documents",
       "subtitle": "Téléchargez les documents officiels de l'association",
       "status": "Status de l'association",
-      "disclaimer": "Décharge USC Lausanne"
+      "disclaimer": "Décharge USC Lausanne",
+      "download": "Télécharger"
     },
     team: {
       title: "Notre Équipe",

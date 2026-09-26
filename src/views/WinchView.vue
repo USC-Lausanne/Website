@@ -1,27 +1,29 @@
 <template>
-    <div class="min-h-screen flex flex-col dark:bg-gray-900 dark:text-gray-200">
-      <HeaderPage />
-  
-      <main class="flex-1 flex flex-col items-center p-4 space-y-8 dark:bg-gray-900">
-        <div class="flex flex-col md:flex-row items-center gap-8 ">
-            <div class="flex flex-col gap-8">
-                <h1 class="text-3xl md:text-4xl font-bold dark:text-gray-200">Winch-Surf</h1>
-                <p class="max-w-xl text-gray-800 dark:text-gray-400">
-                    {{ $t('winchSurf') }}
-                </p>
-            </div>
-            <img src="@/assets/photo6.jpeg" alt="Photo" class="w-80 rounded-xl shadow-lg dark:shadow-gray-800" />
-        </div>
-      </main>
-  
-      <FooterPage />
-    </div>
-</template>
-  
-<script setup>
-    import HeaderPage from "@/components/Header.vue";
-    import FooterPage from '@/components/Footer.vue'
-    import { useI18n } from "vue-i18n"
+  <div class="page-shell">
+    <HeaderPage />
 
-    const { t } = useI18n()
+    <main class="page-main">
+      <section class="grid items-start gap-10 lg:grid-cols-12 lg:gap-14">
+        <div class="lg:col-span-7">
+          <h1 class="page-title">Winch-Surf</h1>
+          <p class="body-text mt-6">{{ $t('winchSurf') }}</p>
+        </div>
+        <img
+          :src="photo"
+          alt="Winch-Surf"
+          class="photo h-auto w-full object-cover lg:col-span-5 lg:aspect-square"
+          loading="lazy"
+          decoding="async"
+        />
+      </section>
+    </main>
+
+    <FooterPage />
+  </div>
+</template>
+
+<script setup>
+import HeaderPage from '@/components/Header.vue'
+import FooterPage from '@/components/Footer.vue'
+import photo from '@/assets/photo6.jpeg'
 </script>
