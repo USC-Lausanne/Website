@@ -92,9 +92,18 @@ jobs:
           # désactive : les noms produits par Vite sont sûrs aujourd'hui, mais
           # rien ne le garantit demain.
           touch dist/.nojekyll
+
+          # L'identité passe par la configuration git, pas par `--user` :
+          # gh-pages analyse cette option avec un parseur RFC 5322, qui refuse
+          # l'adresse canonique du bot à cause des crochets de « [bot] ».
+          # Sans `--user`, gh-pages reprend simplement la configuration
+          # ambiante, que git accepte telle quelle.
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email \
+            '41898282+github-actions[bot]@users.noreply.github.com'
+
           npx gh-pages \
             --dist dist \
             --dotfiles \
-            --user "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>" \
             --repo "https://x-access-token:${JETON}@github.com/${GITHUB_REPOSITORY}.git" \
             --message "Mise en ligne de ${GITHUB_SHA}"
