@@ -1,36 +1,37 @@
 <template>
   <router-link
     :to="to"
-    class="group flex h-full flex-col overflow-hidden rounded border border-black bg-white transition-colors duration-200 hover:border-sky-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:border-sky-400 dark:focus-visible:outline-sky-400"
+    class="group flex h-full flex-col rounded-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-700 dark:focus-visible:outline-sky-400"
   >
-    <div class="overflow-hidden">
+    <div class="overflow-hidden rounded-md shadow">
       <img
         :src="image"
         alt=""
         loading="lazy"
         decoding="async"
-        class="h-44 w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04] motion-reduce:transform-none motion-reduce:transition-none"
+        class="h-48 w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04] motion-reduce:transform-none motion-reduce:transition-none"
       />
     </div>
 
-    <div class="flex flex-1 flex-col p-4">
-      <p class="text-xs font-semibold tracking-[0.18em] text-gray-500 uppercase dark:text-gray-400">
-        {{ where }}
-      </p>
-      <h3 class="mt-2 text-lg font-semibold dark:text-gray-200">{{ title }}</h3>
-      <p class="mt-2 text-sm leading-relaxed text-gray-700 dark:text-gray-400">
-        {{ gloss }}
-      </p>
-      <p
-        class="mt-auto flex items-center gap-1.5 pt-4 text-sm font-semibold text-sky-700 dark:text-sky-400"
-      >
-        {{ learnLabel }}
-        <ArrowRight
-          class="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 motion-reduce:transform-none"
-          aria-hidden="true"
-        />
-      </p>
-    </div>
+    <p class="mt-4 text-sm text-sky-700 italic dark:text-sky-400">{{ where }}</p>
+
+    <h3
+      class="mt-1 text-xl font-semibold transition-colors group-hover:text-sky-700 dark:text-gray-200 dark:group-hover:text-sky-400"
+    >
+      {{ title }}
+    </h3>
+
+    <p class="mt-2 text-sm leading-relaxed text-gray-700 dark:text-gray-400">
+      {{ gloss }}
+    </p>
+
+    <p class="mt-auto flex items-center gap-1.5 pt-4 text-sm font-semibold text-sky-700 dark:text-sky-400">
+      {{ learnLabel }}
+      <ArrowRight
+        class="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1 motion-reduce:transform-none"
+        aria-hidden="true"
+      />
+    </p>
   </router-link>
 </template>
 
