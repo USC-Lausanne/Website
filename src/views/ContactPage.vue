@@ -1,68 +1,68 @@
 <template>
-  <div class="min-h-screen flex flex-col dark:bg-gray-900 dark:text-gray-200">
-    <!-- Header -->
+  <div class="page-shell">
     <HeaderPage />
 
-    <!-- Formulaire -->
-    <main class="grow flex justify-center items-start py-12 px-4 dark:bg-gray-900">
-      <div class="w-full max-w-xl bg-white dark:bg-gray-800 p-8 rounded-lg shadow">
-        <h2 class="text-3xl font-bold mb-6">{{ $t('contact.title') }}</h2>
+    <main class="page-main max-w-xl">
+      <section>
+        <h1 class="page-title">{{ $t('contact.title') }}</h1>
 
-        <form @submit.prevent="handleSubmit" class="space-y-6">
-
-          <!-- Name -->
-          <div class="relative flex flex-col">
+        <form class="mt-8 space-y-5" @submit.prevent="handleSubmit">
+          <div class="relative">
+            <label class="sr-only" for="name">{{ $t('contact.name') }}</label>
             <input
-              type="text"
               id="name"
               v-model="form.name"
+              type="text"
               required
-              placeholder="John Doe"
-              class="pl-10 px-4 py-2 border rounded focus:ring-2 focus:ring-sky-400 focus:outline-none dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600 dark:placeholder-gray-400"
+              :placeholder="$t('contact.name')"
+              :class="field"
             />
-            <User class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <User class="pointer-events-none absolute top-1/2 left-3 h-5 w-5 -translate-y-1/2 text-gray-400" aria-hidden="true" />
           </div>
 
-          <!-- Email -->
-          <div class="relative flex flex-col">
+          <div class="relative">
+            <label class="sr-only" for="email">{{ $t('contact.email') }}</label>
             <input
-              type="email"
               id="email"
               v-model="form.email"
+              type="email"
               required
-              placeholder="john@example.com"
-              class="pl-10 px-4 py-2 border rounded focus:ring-2 focus:ring-sky-400 focus:outline-none dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600 dark:placeholder-gray-400"
+              :placeholder="$t('contact.email')"
+              :class="field"
             />
-            <Mail class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <Mail class="pointer-events-none absolute top-1/2 left-3 h-5 w-5 -translate-y-1/2 text-gray-400" aria-hidden="true" />
           </div>
 
-          <!-- Message -->
-          <div class="relative flex flex-col">
+          <div class="relative">
+            <label class="sr-only" for="message">{{ $t('contact.message') }}</label>
             <textarea
               id="message"
               v-model="form.message"
-              rows="5"
+              rows="6"
               required
-              placeholder="Your message..."
-              class="pl-10 px-4 py-2 border rounded focus:ring-2 focus:ring-sky-400 focus:outline-none resize-none dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600 dark:placeholder-gray-400"
+              :placeholder="$t('contact.message')"
+              :class="[field, 'resize-none']"
             ></textarea>
-            <MessageCircle class="absolute left-3 top-3 text-gray-400 w-5 h-5" />
+            <MessageCircle class="pointer-events-none absolute top-3 left-3 h-5 w-5 text-gray-400" aria-hidden="true" />
           </div>
 
-          <button
-            type="submit"
-            class="w-full bg-sky-500 dark:bg-sky-600 text-white font-semibold py-3 rounded-lg hover:bg-sky-600 dark:hover:bg-sky-700 transition"
-          >
-            {{ $t('contact.send') }}
-          </button>
-
+          <button type="submit" class="btn btn-primary w-full">{{ $t('contact.send') }}</button>
         </form>
 
-        <p v-if="error" class="mt-4 text-red-600 dark:text-red-400 font-medium text-center" role="alert">{{ $t('contact.error') }}</p>
-      </div>
+        <!--
+          Aucun service d'envoi n'est branché : le formulaire annonce l'échec
+          plutôt que de simuler un succès. Voir 64d5a05.
+        -->
+        <p
+          v-if="error"
+          class="mt-4 text-center font-medium text-red-700 dark:text-red-400"
+          role="alert"
+        >
+          {{ $t('contact.error') }}
+        </p>
+      </section>
     </main>
 
-    <!-- Footer -->
     <FooterPage />
   </div>
 </template>
@@ -71,19 +71,12 @@
 import { reactive, ref } from 'vue'
 import HeaderPage from '@/components/Header.vue'
 import FooterPage from '@/components/Footer.vue'
-import { useI18n } from 'vue-i18n'
-
-// Import des icônes Lucide
 import { User, Mail, MessageCircle } from 'lucide-vue-next'
 
-const { t } = useI18n()
+const field =
+  'w-full rounded-lg border border-gray-300 py-2.5 pr-4 pl-10 focus:border-gray-900 focus:outline-none dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:placeholder-gray-500 dark:focus:border-gray-200'
 
-const form = reactive({
-  name: '',
-  email: '',
-  message: '',
-})
-
+const form = reactive({ name: '', email: '', message: '' })
 const error = ref(false)
 
 function handleSubmit() {

@@ -1,50 +1,42 @@
 <template>
-  <div class="min-h-screen flex flex-col dark:bg-gray-900 dark:text-gray-200">
+  <div class="page-shell">
     <HeaderPage />
 
-    <main class="grow w-full max-w-3xl mx-auto px-6 py-12 space-y-8">
-      <header class="space-y-3">
-        <h1 class="text-3xl font-extrabold text-gray-900 dark:text-gray-100">{{ t(`${base}.title`) }}</h1>
-        <p class="text-lg text-gray-600 dark:text-gray-400">{{ t(`${base}.intro`) }}</p>
+    <main class="page-main max-w-3xl space-y-10">
+      <header>
+        <h1 class="page-title">{{ t(`${base}.title`) }}</h1>
+        <p class="page-lead mt-4">{{ t(`${base}.intro`) }}</p>
       </header>
 
       <aside
         v-if="gaps.length"
-        class="rounded-xl border border-amber-500 bg-amber-50 p-5 space-y-3 dark:border-amber-400 dark:bg-gray-800"
+        class="rounded-lg border border-amber-300 bg-amber-50 p-5 dark:border-amber-500/40 dark:bg-amber-500/10"
       >
-        <h2 class="text-lg font-semibold text-amber-950 dark:text-amber-200">{{ t(`${base}.gapsTitle`) }}</h2>
-        <ul class="list-disc pl-5 space-y-1 text-amber-950 dark:text-amber-100">
-          <li v-for="(gap, index) in gaps" :key="index" class="font-medium">{{ gap }}</li>
+        <h2 class="font-semibold text-amber-900 dark:text-amber-200">{{ t(`${base}.gapsTitle`) }}</h2>
+        <ul class="mt-3 list-disc space-y-1 pl-5 text-sm text-amber-900 dark:text-amber-100">
+          <li v-for="(gap, index) in gaps" :key="index">{{ gap }}</li>
         </ul>
-        <p v-if="gapsNote" class="text-sm text-amber-950/90 dark:text-amber-100/90">{{ gapsNote }}</p>
+        <p v-if="gapsNote" class="mt-3 text-sm text-amber-900/90 dark:text-amber-100/90">{{ gapsNote }}</p>
       </aside>
 
-      <section
-        v-for="(section, index) in sections"
-        :key="index"
-        class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 space-y-3"
-      >
-        <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100">{{ section.title }}</h2>
+      <section v-for="(section, index) in sections" :key="index">
+        <h2 class="section-title">{{ section.title }}</h2>
         <p
           v-for="(paragraph, paragraphIndex) in section.paragraphs"
           :key="paragraphIndex"
-          class="text-gray-700 dark:text-gray-300 leading-relaxed"
+          class="body-text mt-3"
         >
           {{ paragraph }}
         </p>
-        <ul v-if="section.links.length" class="space-y-2 pt-1">
+        <ul v-if="section.links.length" class="mt-4 space-y-2">
           <li v-for="(link, linkIndex) in section.links" :key="linkIndex">
-            <router-link
-              v-if="link.to"
-              :to="link.to"
-              class="text-sky-700 dark:text-sky-400 underline underline-offset-2 hover:text-sky-800 dark:hover:text-sky-300"
-            >
+            <router-link v-if="link.to" :to="link.to" class="link-accent underline underline-offset-2">
               {{ link.label }}
             </router-link>
             <a
               v-else
               :href="link.href"
-              class="text-sky-700 dark:text-sky-400 underline underline-offset-2 hover:text-sky-800 dark:hover:text-sky-300"
+              class="link-accent underline underline-offset-2"
               target="_blank"
               rel="noopener noreferrer"
             >
