@@ -1,0 +1,100 @@
+# Vérifie chaque proposition de modification, et met le site en ligne dès
+# qu'une branche arrive sur `main`.
+#
+# Le déploiement passe par la branche `gh-pages`, comme le fait déjà
+# `npm run deploy` en local : GitHub Pages est configuré pour servir depuis
+# cette branche, et ce workflow ne change rien à ce réglage.
+
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  # Permet de relancer une mise en ligne à la main depuis l'onglet Actions,
+  # sans avoir à pousser un commit.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Deux pushes rapprochés sur une même branche : on annule la vérification en
+# cours, sauf sur `main` où l'on tient à ce que chaque déploiement aille au
+# bout.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  verifier:
+    name: Vérifications et build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Installer les dépendances
+        run: npm ci
+
+      - name: Contrôles
+        run: npm run check
+
+      - name: Construire le site
+        run: npm run build
+
+      - name: Conserver le site construit pour le déploiement
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: dist
+          retention-days: 1
+
+  deployer:
+    name: Mise en ligne
+    needs: verifier
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      # Nécessaire pour pousser sur la branche `gh-pages`.
+      contents: write
+    environment:
+      name: github-pages
+      url: https://usc-lausanne.github.io/Website/
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Installer les dépendances
+        run: npm ci
+
+      - name: Récupérer le site construit
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: dist
+
+      - name: Publier sur gh-pages
+        env:
+          JETON: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # GitHub Pages fait tourner Jekyll par défaut, qui ignore les
+          # fichiers et dossiers commençant par un tiret bas. Ce fichier le
+          # désactive : les noms produits par Vite sont sûrs aujourd'hui, mais
+          # rien ne le garantit demain.
+          touch dist/.nojekyll
+          npx gh-pages \
+            --dist dist \
+            --dotfiles \
+            --user "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>" \
+            --repo "https://x-access-token:${JETON}@github.com/${GITHUB_REPOSITORY}.git" \
+            --message "Mise en ligne de ${GITHUB_SHA}"
